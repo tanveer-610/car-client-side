@@ -1,0 +1,6 @@
+.custom-card-bg{
+    transition: 0.5s;
+}
+.custom-card-bg:hover{
+    transform: scale(1.1);
+}

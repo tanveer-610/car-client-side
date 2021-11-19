@@ -1,0 +1,6 @@
+.dashboard{
+    box-sizing: border-box;
+    height: 100vh;
+    background-image: url('../../../Assets/Image/dashboardBg.jpg');
+    background-size: cover;
+}
