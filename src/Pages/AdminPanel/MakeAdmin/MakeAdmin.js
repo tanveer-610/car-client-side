@@ -10,7 +10,7 @@ const MakeAdmin = () => {
 
     const handleOnBlur = (e) => {
         const user = { email }
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://fathomless-tundra-00974.herokuapp.com/users/admin', {
             method: "PUT",
             headers: {
                 'authorization': `Bearer ${token}`,

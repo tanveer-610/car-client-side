@@ -16,13 +16,13 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${_id}`)
+        fetch(`https://fathomless-tundra-00974.herokuapp.com/products/${_id}`)
             .then(res => res.json())
             .then(data => setPurchesProduct(data))
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${emailValue}`)
+        fetch(`https://fathomless-tundra-00974.herokuapp.com/users/${emailValue}`)
             .then(res => res.json())
             .then(data => setUserInfo(data))
     }, []);
@@ -46,7 +46,7 @@ const Purchase = () => {
             orderStatus: purchesProduct.status
         }
         if (customerAdress !== '' && customerPhone !== '') {
-            axios.post('http://localhost:5000/order', data)
+            axios.post('https://fathomless-tundra-00974.herokuapp.com/order', data)
                 .then(res => {
                     if (res.data.insertedId) {
                         history.push('/payBill');

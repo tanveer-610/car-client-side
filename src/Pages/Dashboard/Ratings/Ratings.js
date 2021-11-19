@@ -28,7 +28,7 @@ const Ratings = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${emailValue}`)
+        fetch(`https://fathomless-tundra-00974.herokuapp.com/users/${emailValue}`)
             .then(res => res.json())
             .then(data => setUserInfo(data))
     }, []);
@@ -43,7 +43,7 @@ const Ratings = () => {
         }
 
         if (customerComment !== '') {
-            axios.post('http://localhost:5000/ratings', data)
+            axios.post('https://fathomless-tundra-00974.herokuapp.com/ratings', data)
                 .then(res => {
                     if (res.data.insertedId) {
                         alert("Review is recorded");

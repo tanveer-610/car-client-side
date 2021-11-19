@@ -7,7 +7,7 @@ const MyOrder = () => {
     const { user } = useAuth();
     const [orders, setOrder] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://fathomless-tundra-00974.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrder(data));
     }, []);

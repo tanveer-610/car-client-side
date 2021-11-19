@@ -5,7 +5,7 @@ import SingleHomeProduct from './SingleHomeProduct';
 const HomeProducts = () => {
     const [homeProduct, setHomeProduct] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/homeProduct')
+        fetch('https://fathomless-tundra-00974.herokuapp.com/homeProduct')
             .then(res => res.json())
             .then(data => setHomeProduct(data))
     }, []);
